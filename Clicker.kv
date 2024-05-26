@@ -2,7 +2,8 @@
     BoxLayout:
         orientation: "vertical"
         Label:
-            text: "Рахунок"
+            id: score_lbl
+            text: "0"
         FloatLayout:
             Image:
                 id: ball
@@ -16,4 +17,56 @@
                 on_press: root.click()
                 on_release: print("Зменшити")
         Button:
-            text: "123"
+            text: "Магазин"
+            on_press: root.switch_to_shop()
+
+<MenuScreen>:
+    Button:
+
+
+
+
+
+<ShopScreen>:
+    FloatLayout:
+        Image:
+            source: 'navigation-image_sunglasses_men.png'
+            allow_stretch: True
+            keep_ratio: False
+        BoxLayout:
+            orientation: "vertical"
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint: 1, 0.2
+                Button:
+                    text: "Назад"
+                Label:
+                    text: "Рахунок"
+            ScrollView:
+                size_hint_y: None
+                size_hint: 1, 1
+                GridLayout:
+                    id: shopItems
+                    size_hint_y: None
+                    height: self.minimum_height
+                    cols: 1
+                    row_default_height: 100
+                    FloatLayout:
+                        Button:
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(69, 10)
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: ''
+                    FloatLayout:
+                        Button:
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(69, 10)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'navigation-image_sunglasses_men.png'
