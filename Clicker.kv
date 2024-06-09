@@ -9,7 +9,7 @@
                 id: ball
                 size_hint: 0.5, 1
                 pos_hint: {"center_x": 0.5, "top": 1}
-                source: "boc293482_1.webp"
+                source: "istockphoto-1437611221-1024x1024.jpg"
             Button:
                 size_hint: 0.5, 1
                 background_color: 1,0,0,0.5
@@ -40,6 +40,7 @@
                 size_hint: 1, 0.2
                 Button:
                     text: "Назад"
+                    on_press: root.switch_to_main()
                 Label:
                     text: "Рахунок"
             ScrollView:
@@ -55,18 +56,18 @@
                         Button:
                             size_hint: 1, 1
                             pos_hint: {'center_x': 0.5, 'center_y':0.5}
-                            on_press: root.buy(69, 10)
+                            on_press: root.buy(12, 10)
                         Image:
                             size_hint: 0.1, 1
                             pos_hint: {'x': 0, 'center_y':0.5}
-                            source: ''
+                            source: 'AP791920-10.jpg'
                     FloatLayout:
                         Button:
                             size_hint: 1, 1
                             pos_hint: {'center_x': 0.5, 'center_y':0.5}
-                            on_press: root.buy(69, 10)
+                            on_press: root.buy(20, 15)
 
                         Image:
                             size_hint: 0.1, 1
                             pos_hint: {'x': 0, 'center_y':0.5}
-                            source: 'navigation-image_sunglasses_men.png'
+                            source: 'boc293482_1.webp'

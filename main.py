@@ -52,6 +52,9 @@ class ShopScreen(Screen):
             player["power"] += power
             save_data()
 
+    def switch_to_main(self):
+        self.manager.current = "main"
+
 class ClickerApp(App):
     def build(self):
         sm = ScreenManager()
